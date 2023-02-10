@@ -3,10 +3,10 @@ import output_data as out_d
 import view
 
 def choice():
-    number = view.operation()
+    res = None
+    number = view.get_operation()
     if number == 1:
-        in_d.new_record()
-    elif number == 0:
-        out_d.get_database()
+        res = in_d.new_record()
     else:
-        print('Операция недоступна')
+        res = out_d.get_database()
+    
